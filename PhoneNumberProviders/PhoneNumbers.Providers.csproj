@@ -10,4 +10,8 @@
     <PackageReference Include="libphonenumber-csharp" Version="8.13.34" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\PhoneNumber\Numbers.csproj" />
+  </ItemGroup>
+
 </Project>
