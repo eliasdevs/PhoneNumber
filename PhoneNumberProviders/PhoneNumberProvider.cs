@@ -1,6 +1,7 @@
 ﻿
 using Numbers;
 using System.Globalization;
+using System.Linq;
 
 namespace PhoneNumbers.Providers
 {
@@ -21,15 +22,24 @@ namespace PhoneNumbers.Providers
             PhoneNumberUtil phoneUtil = PhoneNumberUtil.GetInstance();
 
             HashSet<string> regionCodes = phoneUtil.GetSupportedRegions();
-
             return regionCodes.Select(regionCode => new CountryInformation(
                                         RegionCode: regionCode,
-                                        Name: new RegionInfo(regionCode).DisplayName,
+                                        Name: GetNameCountry(regionCode),
                                         CountryCode: phoneUtil.GetCountryCodeForRegion(regionCode).ToString(),
                                         Icon: GetIconByCountry(regionCode))).ToList();
         }
 
-        string GetIconByCountry(string regionCode) => $"https://flagpedia.net/data/flags/mini/{regionCode}.png";
+        string? GetNameCountry(string regionCode)
+        {
+            try
+            {
+                return new RegionInfo(regionCode).DisplayName;
+            }
+            catch { }
+            return null;
+        }
+
+        string GetIconByCountry(string regionCode) => $"https://flagpedia.net/data/flags/mini/{regionCode.ToLower()}.png";
 
         public bool IsValidPhoneNumber(string phoneNumber, string country)
         {

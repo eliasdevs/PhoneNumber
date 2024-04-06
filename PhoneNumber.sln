@@ -9,6 +9,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Provider", "Provider", "{C2
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumbers.Providers", "PhoneNumberProviders\PhoneNumbers.Providers.csproj", "{105EEFC9-AC44-4246-AC7F-67690BA7E2C6}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhoneNumbers.Providers.UniTest", "PhoneNumbers.Providers.UniTest\PhoneNumbers.Providers.UniTest.csproj", "{8A4B1BBD-8DB0-4FEB-9723-F3F49FAE3957}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,12 +25,17 @@ Global
 		{105EEFC9-AC44-4246-AC7F-67690BA7E2C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{105EEFC9-AC44-4246-AC7F-67690BA7E2C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{105EEFC9-AC44-4246-AC7F-67690BA7E2C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8A4B1BBD-8DB0-4FEB-9723-F3F49FAE3957}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8A4B1BBD-8DB0-4FEB-9723-F3F49FAE3957}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8A4B1BBD-8DB0-4FEB-9723-F3F49FAE3957}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8A4B1BBD-8DB0-4FEB-9723-F3F49FAE3957}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{105EEFC9-AC44-4246-AC7F-67690BA7E2C6} = {C20A6214-2D34-4F97-954E-FF3743C2BCE6}
+		{8A4B1BBD-8DB0-4FEB-9723-F3F49FAE3957} = {C20A6214-2D34-4F97-954E-FF3743C2BCE6}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {F6440DF6-B498-4AC4-85B9-D25EE1BBBC0E}
